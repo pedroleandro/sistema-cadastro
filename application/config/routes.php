@@ -85,5 +85,9 @@ $route['deletarProfessor'] = 'ProfessorController/deletar_professor_data';
 //Area Restrita
 $route['perfil'] = 'PerfilController/index';
 
+//Formulario Dinamico
+$route['form'] = 'FormularioDinamicoController/index';
+$route['formGetData'] = 'FormularioDinamicoController/getFormDataJson';
+
 
 
