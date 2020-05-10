@@ -30,7 +30,8 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/tests/
 /tests/results/
 
-tmp/
-public/images/
-stisla-master/
-application/config/
+/tmp/
+/public/images/
+/stisla-master/
+/application/config/
+/vendor/

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-	<title>Login &mdash; Stisla</title>
+	<title>Login &mdash; GeCad</title>
 
 	<!-- General CSS Files -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,51 +28,11 @@
 						<div class="card-header"><h4>Login</h4></div>
 
 						<div class="card-body">
-							<form id="form_login" method="POST" class="needs-validation" novalidate="">
-<!--								action="loginVerify" class="needs-validation" novalidate=""-->
-								<div class="form-group">
-									<label for="email">Email</label>
-									<input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
-									<div class="invalid-feedback">
-										Por favor, preencha com seu e-mail
-									</div>
-								</div>
-
-<!--								<div class="form-group">-->
-<!--									<label for="text">Usuario</label>-->
-<!--									<input id="usuario" type="text" class="form-control" name="usuario" tabindex="1" required autofocus>-->
-<!--									<div class="invalid-feedback">-->
-<!--										Por favor, preencha com seu usuario-->
-<!--									</div>-->
-<!--								</div>-->
-
-								<div class="form-group">
-									<div class="d-block">
-										<label for="password" class="control-label">Senha</label>
-										<div class="float-right">
-											<a href="" class="text-small">
-												Esqueceu sua senha?
-											</a>
-										</div>
-									</div>
-									<input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-									<div class="invalid-feedback">
-										Por favor, preencha com sua senha
-									</div>
-								</div>
-
-								<div class="form-group">
-									<div class="custom-control custom-checkbox">
-										<input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-										<label class="custom-control-label" for="remember-me">Lembrar de mim</label>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<button type="submit" id="btn_login" class="btn btn-primary btn-lg btn-block" tabindex="4">
-										Entrar
-									</button>
-								</div>
+							<form id="form_login" name="form_login" method="post" class="" novalidate="">
+								<?php
+								foreach ($form as $item)
+									print_r($item);
+								?>
 								<span class="help-block"></span>
 							</form>
 						</div>

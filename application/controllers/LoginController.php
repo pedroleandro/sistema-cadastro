@@ -1,6 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
+use Nahid\JsonQ\Jsonq;
+require 'vendor/autoload.php';
 
 class LoginController extends CI_Controller
 {
@@ -16,7 +17,8 @@ class LoginController extends CI_Controller
 			$data["user_id"] = $this->session->userdata("id");
 			$this->load->view('restrict.php', $data);
 		}else{
-			$this->load->view('login.php');
+			$data["form"] = $this->buildFormLogin();
+  			$this->load->view('login.php', $data);
 		}
 	}
 
@@ -24,7 +26,6 @@ class LoginController extends CI_Controller
 		$this->session->sess_destroy();
 		header("Location: ". base_url() . "login");
 	}
-
 
 	public function login(){
 
@@ -69,6 +70,34 @@ class LoginController extends CI_Controller
 		}
 		echo json_encode($json);
 
+	}
+
+	public function buildFormLogin(){
+
+		$formLoginJson = new Jsonq('forms/formLogin.json');
+		$fields = $formLoginJson->find('fields');
+
+		$form = Array();
+
+		foreach ($fields as $field){
+
+			if($field["tag"] == "input"){
+				$item = '	<div class="' .$field["div-class"]. '">
+								<label for="' .$field["label-for"]. '">' .$field["label"]. '</label>
+								<input id="' .$field["id"]. '" name="' .$field["name"]. '" type="' .$field["type"]. '" class="' .$field["class"]. '	" required>
+							</div>';
+				array_push($form, $item);
+			}else if($field["tag"] == "button"){
+				$item = '	<div class="' .$field["div-class"]. '">
+								<button id="' .$field["id"]. '" name="' .$field["name"]. '" type="' .$field["type"]. '" class="' .$field["class"]. '">
+									' .$field["label"]. '
+								</button>
+							</div>';
+				array_push($form, $item);
+			}
+		}
+
+		return $form;
 	}
 
 }

@@ -1,0 +1,81 @@
+{
+  "sections": [
+    {
+      "title" : "Prefeitura Municipal de Parnarama MA",
+      "subtitle" : "Atualização Cadastral de Servidor"
+    },
+    { "title" : "Dados Pessoais",
+      "fields": [
+        {
+          "label": "CPF",
+          "type": "text",
+          "class": "form-control",
+          "id": "cpf",
+          "name": "cpf",
+          "value": ""
+        }
+      ]
+    },
+
+    { "title" : "Identificaçao da Unidade Conveniada",
+      "fields": [
+        {
+          "label": "Secretaria Competente",
+          "type": "text",
+          "class": "form-control",
+          "id": "secretaria",
+          "name": "secretaria",
+          "class": "form-control",
+          "value": ""
+        },
+        {
+          "label": "Matricula",
+          "type": "text",
+          "class": "form-control",
+          "id": "matricula",
+          "name": "matricula",
+          "value": ""
+        }
+      ]
+    },
+
+    { "title" : "Identificaçao do Solicitante",
+      "fields": [
+        {
+          "label": "Nome Completo",
+          "type": "text",
+          "class": "form-control",
+          "id": "nome",
+          "name": "nome",
+          "class": "form-control",
+          "value": ""
+        },
+        {
+          "label": "Data de Nascimento",
+          "type": "text",
+          "class": "form-control dn",
+          "id": "data_nascimento",
+          "name": "data_nascimento",
+          "value": ""
+        },
+        {
+          "label": "Naturalidade",
+          "type": "text",
+          "class": "form-control",
+          "id": "naturalidade",
+          "name": "naturalidade",
+          "value": ""
+        },
+        {
+          "label": "Sexo",
+          "type": "",
+          "class": "custom-select d-block w-100",
+          "id": "sexo",
+          "name": "sexo",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
+

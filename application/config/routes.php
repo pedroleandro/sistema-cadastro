@@ -87,7 +87,6 @@ $route['perfil'] = 'PerfilController/index';
 
 //Formulario Dinamico
 $route['form'] = 'FormularioDinamicoController/index';
-$route['formGetData'] = 'FormularioDinamicoController/getFormDataJson';
 
 
 
